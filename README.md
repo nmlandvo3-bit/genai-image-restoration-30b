@@ -95,6 +95,80 @@ The selected checkpoint was from Epoch 3 with:
 Validation PSNR: 32.755 dB
 ```
 
+## Quick Start
+
+### Requirements
+
+Recommended environment:
+
+- Windows 10 or Windows 11
+- Python 3.11 or newer
+- Git
+- Git LFS
+- NVIDIA GPU with CUDA support recommended
+- Sufficient storage for the model checkpoints
+
+The model checkpoints are stored using Git LFS.
+
+### Fresh PC Setup
+
+Clone the repository:
+
+```powershell
+git clone https://github.com/nmlandvo3-bit/genai-image-restoration-30b.git
+cd genai-image-restoration-30b
+```
+
+Make sure Git LFS is installed and pull the model files:
+
+```powershell
+git lfs install
+git lfs pull
+```
+
+Create a virtual environment:
+
+```powershell
+python -m venv .venv
+```
+
+Activate it:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+Install the required Python packages:
+
+```powershell
+pip install -r requirements.txt
+```
+
+Launch the GUI:
+
+```powershell
+python restoration_gui_30b.py
+```
+
+### Verify the Model Files
+
+After `git lfs pull`, the following model files should exist:
+
+```text
+models/experiment_28j_release/damage_detector_28j_final.pt
+models/experiment_29a_damage_classifier/best_mask_aware_resnet18.pt
+models/experiment_29b_deblur_specialist/best_motion_gaussian_finetune.pt
+models/experiment_30b_noise_specialist/best_noise_specialist.pt
+```
+
+If these files are missing or extremely small, run:
+
+```powershell
+git lfs pull
+```
+
+again before launching the application.
+
 ## GUI
 
 The project includes a Tkinter GUI with:
