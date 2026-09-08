@@ -197,6 +197,104 @@ Missing   -> Telea
 Irregular -> Telea
 ```
 
+## Demo Results
+
+The examples below show representative outputs from the six restoration routes.
+
+### Clean Image
+
+**Input**
+
+![Clean input](demo_images/01_clean_input.png)
+
+**Restored**
+
+![Clean restored](example_results/01_clean_restored.png)
+
+**Predicted mask**
+
+![Clean mask](example_results/01_clean_mask.png)
+
+---
+
+### Noise
+
+**Input**
+
+![Noise input](demo_images/02_noise_input.png)
+
+**Restored**
+
+![Noise restored](example_results/02_noise_restored.png)
+
+**Predicted mask**
+
+![Noise mask](example_results/02_noise_mask.png)
+
+---
+
+### Blur
+
+**Input**
+
+![Blur input](demo_images/03_blur_input.png)
+
+**Restored**
+
+![Blur restored](example_results/03_blur_restored.png)
+
+**Predicted mask**
+
+![Blur mask](example_results/03_blur_mask.png)
+
+---
+
+### Scratch
+
+**Input**
+
+![Scratch input](demo_images/04_scratch_input.png)
+
+**Restored**
+
+![Scratch restored](example_results/04_scratch_restored.png)
+
+**Predicted mask**
+
+![Scratch mask](example_results/04_scratch_mask.png)
+
+---
+
+### Missing Region
+
+**Input**
+
+![Missing input](demo_images/05_missing_input.png)
+
+**Restored**
+
+![Missing restored](example_results/05_missing_restored.png)
+
+**Predicted mask**
+
+![Missing mask](example_results/05_missing_mask.png)
+
+---
+
+### Irregular Missing Region
+
+**Input**
+
+![Irregular input](demo_images/06_irregular_input.png)
+
+**Restored**
+
+![Irregular restored](example_results/06_irregular_restored.png)
+
+**Predicted mask**
+
+![Irregular mask](example_results/06_irregular_mask.png)
+
 ## Limitations
 
 The system performs strongest on damage patterns similar to its training and validation distributions.
