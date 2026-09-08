@@ -137,7 +137,9 @@ genai-restoration-30b-production/
 ├── README.md
 ├── requirements.txt
 ├── THIRD_PARTY_NOTICES.md
+├── RELEASE_MANIFEST.txt
 ├── .gitignore
+├── .gitattributes
 │
 ├── scripts/
 │   ├── final_multispecialist_restoration_pipeline_30b.py
@@ -156,8 +158,32 @@ genai-restoration-30b-production/
 │   └── Restormer/
 │
 ├── demo_images/
+│   ├── 01_clean_input.png
+│   ├── 02_noise_input.png
+│   ├── 03_blur_input.png
+│   ├── 04_scratch_input.png
+│   ├── 05_missing_input.png
+│   └── 06_irregular_input.png
 │
 └── example_results/
+    ├── 01_clean_restored.png
+    ├── 01_clean_mask.png
+    ├── 01_clean_report.json
+    ├── 02_noise_restored.png
+    ├── 02_noise_mask.png
+    ├── 02_noise_report.json
+    ├── 03_blur_restored.png
+    ├── 03_blur_mask.png
+    ├── 03_blur_report.json
+    ├── 04_scratch_restored.png
+    ├── 04_scratch_mask.png
+    ├── 04_scratch_report.json
+    ├── 05_missing_restored.png
+    ├── 05_missing_mask.png
+    ├── 05_missing_report.json
+    ├── 06_irregular_restored.png
+    ├── 06_irregular_mask.png
+    └── 06_irregular_report.json
 ```
 
 ## Installation
@@ -182,7 +208,7 @@ The 30B denoiser checkpoint currently has:
 7f715c0b0afe714716bf7883db59e6730981783ab9691c828ca1c813cfa31c0f
 ```
 
-Hashes are used to verify that the exact validated model files have not been changed.
+Additional verified production hashes are recorded in `RELEASE_MANIFEST.txt`.
 
 ## Validation
 
@@ -196,6 +222,7 @@ Scratch   -> Navier-Stokes
 Missing   -> Telea
 Irregular -> Telea
 ```
+
 ## Demo Results
 
 The examples below show representative outputs from the six restoration routes.
