@@ -1,0 +1,27 @@
+﻿30B Multi-Specialist Image Restoration System
+Release Integrity Manifest
+Generated: 2026-09-08 21:29:42
+
+SHA256 fingerprints
+===================
+
+File: restoration_gui_30b.py
+SHA256: D2DB6AF0623F1A4B255C913910F9F22A2CBE21509264830FB810C5E74C82FDB8
+
+File: scripts\final_multispecialist_restoration_pipeline_30b.py
+SHA256: D8A8458E18E230F222CBC4BE94E20C3CB747D7549CED62D2B0F4D2FCA713CD96
+
+File: scripts\final_restoration_pipeline.py
+SHA256: 44864649E62077AA716E93ECF366E3B95E61D11F3EAD8BF0FF176E7042A5A9BC
+
+File: models\experiment_28j_release\damage_detector_28j_final.pt
+SHA256: 1F32439E6E86EC75D07C7E29C73F0B4590670EC8C44A83F16BB5764B97DA300E
+
+File: models\experiment_29a_damage_classifier\best_mask_aware_resnet18.pt
+SHA256: 2C7F4E796FD75616C55352C6A6D6A272A4936FC0875ACF7FED08B123C14DDE37
+
+File: models\experiment_29b_deblur_specialist\best_motion_gaussian_finetune.pt
+SHA256: 71754C8DEDA6519604F640A18C6F0685BB45F5C8031419A11B90406ADEB503EB
+
+File: models\experiment_30b_noise_specialist\best_noise_specialist.pt
+SHA256: 7F715C0B0AFE714716BF7883DB59E6730981783AB9691C828CA1C813CFA31C0F

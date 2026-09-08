@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+
+.venv/
+.venv-*/
+venv/
+
+gui_results_30b/
+test_*.png
+test_*.json
+
+.DS_Store
+Thumbs.db
+
+*.log
