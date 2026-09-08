@@ -1,0 +1,80 @@
+{
+  "pipeline": "final_multispecialist_restoration_pipeline_30b",
+  "status": "COMPLETE",
+  "input_path": "D:\\VS code projects\\genai-image-restoration\\deployment\\genai-restoration-30b-production\\demo_images\\03_blur_input.png",
+  "output_path": "D:\\VS code projects\\genai-image-restoration\\deployment\\genai-restoration-30b-production\\example_results\\03_blur_restored.png",
+  "image_width": 512,
+  "image_height": 512,
+  "detector": {
+    "predicted_mask_fraction": 0.0167999267578125,
+    "gate_threshold": 0.0025,
+    "routed_as_damage": true
+  },
+  "classifier": {
+    "executed": true,
+    "predicted_class": "blur",
+    "confidence": 0.9909352660179138,
+    "class_names": [
+      "clean",
+      "noise",
+      "blur",
+      "scratch",
+      "missing",
+      "irregular"
+    ],
+    "probabilities": {
+      "clean": 0.0004704688908532262,
+      "noise": 0.002039598301053047,
+      "blur": 0.9909352660179138,
+      "scratch": 0.002567854942753911,
+      "missing": 0.002130391076207161,
+      "irregular": 0.0018564766505733132
+    }
+  },
+  "routing": {
+    "specialist": "deblur",
+    "class_to_specialist": {
+      "clean": "preserve",
+      "noise": "denoise",
+      "blur": "deblur",
+      "scratch": "scratch_inpaint",
+      "missing": "inpaint",
+      "irregular": "inpaint"
+    }
+  },
+  "specialist_configuration": {
+    "noise": {
+      "type": "Restormer_30B_finetuned",
+      "checkpoint": "D:\\VS code projects\\genai-image-restoration\\deployment\\genai-restoration-30b-production\\models\\experiment_30b_noise_specialist\\best_noise_specialist.pt",
+      "checkpoint_epoch": null,
+      "checkpoint_validation_psnr": null,
+      "localization": "frozen_28j_feathered_predicted_mask"
+    },
+    "blur": {
+      "type": "Restormer",
+      "checkpoint": "D:\\VS code projects\\genai-image-restoration\\deployment\\genai-restoration-30b-production\\models\\experiment_29b_deblur_specialist\\best_motion_gaussian_finetune.pt",
+      "tile_size": 512,
+      "tile_overlap": 32,
+      "localization": "hard_binary_predicted_mask"
+    },
+    "scratch": {
+      "type": "OpenCV",
+      "method": "Navier-Stokes",
+      "radius": 7,
+      "localization": "predicted_mask"
+    },
+    "missing_irregular": {
+      "type": "OpenCV",
+      "method": "Telea",
+      "radius": 15,
+      "localization": "predicted_mask"
+    }
+  },
+  "artifacts": {
+    "28j_production_script_sha256": "44864649e62077aa716e93ecf366e3b95e61d11f3ead8bf0ff176e7042a5a9bc",
+    "detector_sha256": "1f32439e6e86ec75d07c7e29c73f0b4590670ec8c44a83f16bb5764b97da300e",
+    "classifier_sha256": "2c7f4e796fd75616c55352c6a6d6a272a4936fc0875acf7fed08b123c14dde37",
+    "30b_denoiser_sha256": "7f715c0b0afe714716bf7883db59e6730981783ab9691c828ca1c813cfa31c0f",
+    "deblur_sha256": "71754c8deda6519604f640a18c6f0685bb45f5c8031419a11b90406adeb503eb"
+  }
+}
