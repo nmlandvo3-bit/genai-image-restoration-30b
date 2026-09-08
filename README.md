@@ -196,7 +196,6 @@ Scratch   -> Navier-Stokes
 Missing   -> Telea
 Irregular -> Telea
 ```
-
 ## Demo Results
 
 The examples below show representative outputs from the six restoration routes.
@@ -205,15 +204,15 @@ The examples below show representative outputs from the six restoration routes.
 
 **Input**
 
-![Clean input](demo_images/01_clean_input.png)
+![Clean input](./demo_images/01_clean_input.png)
 
 **Restored**
 
-![Clean restored](example_results/01_clean_restored.png)
+![Clean restored](./example_results/01_clean_restored.png)
 
 **Predicted mask**
 
-![Clean mask](example_results/01_clean_mask.png)
+![Clean mask](./example_results/01_clean_mask.png)
 
 ---
 
@@ -221,15 +220,15 @@ The examples below show representative outputs from the six restoration routes.
 
 **Input**
 
-![Noise input](demo_images/02_noise_input.png)
+![Noise input](./demo_images/02_noise_input.png)
 
 **Restored**
 
-![Noise restored](example_results/02_noise_restored.png)
+![Noise restored](./example_results/02_noise_restored.png)
 
 **Predicted mask**
 
-![Noise mask](example_results/02_noise_mask.png)
+![Noise mask](./example_results/02_noise_mask.png)
 
 ---
 
@@ -237,15 +236,15 @@ The examples below show representative outputs from the six restoration routes.
 
 **Input**
 
-![Blur input](demo_images/03_blur_input.png)
+![Blur input](./demo_images/03_blur_input.png)
 
 **Restored**
 
-![Blur restored](example_results/03_blur_restored.png)
+![Blur restored](./example_results/03_blur_restored.png)
 
 **Predicted mask**
 
-![Blur mask](example_results/03_blur_mask.png)
+![Blur mask](./example_results/03_blur_mask.png)
 
 ---
 
@@ -253,15 +252,15 @@ The examples below show representative outputs from the six restoration routes.
 
 **Input**
 
-![Scratch input](demo_images/04_scratch_input.png)
+![Scratch input](./demo_images/04_scratch_input.png)
 
 **Restored**
 
-![Scratch restored](example_results/04_scratch_restored.png)
+![Scratch restored](./example_results/04_scratch_restored.png)
 
 **Predicted mask**
 
-![Scratch mask](example_results/04_scratch_mask.png)
+![Scratch mask](./example_results/04_scratch_mask.png)
 
 ---
 
@@ -269,15 +268,15 @@ The examples below show representative outputs from the six restoration routes.
 
 **Input**
 
-![Missing input](demo_images/05_missing_input.png)
+![Missing input](./demo_images/05_missing_input.png)
 
 **Restored**
 
-![Missing restored](example_results/05_missing_restored.png)
+![Missing restored](./example_results/05_missing_restored.png)
 
 **Predicted mask**
 
-![Missing mask](example_results/05_missing_mask.png)
+![Missing mask](./example_results/05_missing_mask.png)
 
 ---
 
@@ -285,15 +284,15 @@ The examples below show representative outputs from the six restoration routes.
 
 **Input**
 
-![Irregular input](demo_images/06_irregular_input.png)
+![Irregular input](./demo_images/06_irregular_input.png)
 
 **Restored**
 
-![Irregular restored](example_results/06_irregular_restored.png)
+![Irregular restored](./example_results/06_irregular_restored.png)
 
 **Predicted mask**
 
-![Irregular mask](example_results/06_irregular_mask.png)
+![Irregular mask](./example_results/06_irregular_mask.png)
 
 ## Limitations
 
